@@ -1,6 +1,6 @@
 // JavaScript Document
 $(document).ready(function(e) {
-document.addEventListener("deviceready",function(){
+//document.addEventListener("deviceready",function(){
 $('#btnjugar').on ('tap',function(){
 
 	var pantalla=$.mobile.getScreenHeight();
@@ -38,5 +38,5 @@ $('.cuadro').on ('vmousedown', function(){
 });//cuadro
 
  
-});
+//});
 
