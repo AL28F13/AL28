@@ -2,6 +2,19 @@
 $(document).ready(function(e) {
 document.addEventListener("deviceready",function(){
 	var basedatos= window.sqlitePlugin.openDatabase ({name: "ColoresBD.db", createFromLocation:1});
+	cargarnombrejugador();
+	function cargarnombrejugador()
+	{
+		basedatos.transaction (function (ejecutar){
+			var sql="SELECT NombreUsuario FROM Usuario";
+			ejecutar. executeSql (sql, undefined,function(ejecutar, resultado){
+				var datosJugador=resultado.rows.item(0);
+				$('#jugador').text(datosJugador,NombreUsuario);
+	
+	
+	});
+	});
+	}
 	audio=window.plugins.LowLatencyAudio;
 	audio.preloadFX('B1', 'audio/C.mp3', function(){}, function(msg){alert ("Error " + msg);});
 	audio.preloadFX('B2', 'audio/D.mp3', function(){}, function(msg){alert ("Error " + msg);});
