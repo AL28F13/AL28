@@ -9,7 +9,7 @@ document.addEventListener("deviceready",function(){
 			var sql="SELECT NombreUsuario FROM Usuario";
 			ejecutar. executeSql (sql, undefined,function(ejecutar, resultado){
 				var datosJugador=resultado.rows.item(0);
-				$('#jugador').text(datosJugador,NombreUsuario);
+				$('#jugador').text(datosJugador.NombreUsuario);
 	
 	
 	});
