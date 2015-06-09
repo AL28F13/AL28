@@ -28,12 +28,16 @@
  <div data-role="page" id="principal" >   
   <div data-role="header">
  
-    <h1>Juego....</h1>
+    <h1> <div id="jugador"> Jugador </div>  </h1>
   </div>
 
   <div data-role="main" class="ui-content" align="center">
-   <div id="jugador"> Jugador </div>
-   <a href="#pagina2"  id="btnjugar" data-transition="flip" class="ui-btn ui-icon-check ui-btn-icon-right ui-shadow ui-corner-all ui-btn-inline">Jugar</a>
+   
+   <a href="#pagina2"  id="btnjugar" data-transition="flip"  class="ui-btn ui-icon-check ui-btn-icon-right ui-icon-check ui-shadow ui-corner-all ui-btn-inline">Jugar</a>
+  
+  <div>
+    <a href="#config"  id="btnconfigurar" data-transition="flip" class="ui-btn ui-icon-check ui-btn-icon-right ui-icon-gear ui-shadow ui-corner-all ui-btn-inline">Configuracion</a>
+</div>
 </div>
 
   <div data-role="footer">
@@ -62,5 +66,25 @@
  </div>  
  <!-- Pagina2 -->
 
+
+
+ <!-- Pagina3 -->
+ <div data-role="page" id="config" >   
+  <div data-role="header">
+  <h1> CONFIGURACION</h1>
+   </div>
+
+ <div data-role="main" class="ui-content" align="center">
+ <div id="txtnombre"> </div>
+    <a href="#guardar"  id="btnguardar" data-transition="flip"  class="ui-btn ui-icon-check ui-btn-icon-right ui-icon-user ui-shadow ui-corner-all ui-btn-inline">Guardar</a>
+  
+   
+  </div>
+
+  <div data-role="footer" align="center">
+  <a href="#principal"  id="btninicio" data-transition="flip"  class="ui-btn ui-icon-check ui-btn-icon-right ui-icon-home ui-shadow ui-corner-all ui-btn-inline">Inicion</a>
+  </div>
+ </div>  
+ <!-- Pagina3 -->
  </body>
 </html> 

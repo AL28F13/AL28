@@ -15,6 +15,18 @@ document.addEventListener("deviceready",function(){
 	});
 	});
 	}
+	
+	$('#btnconfigurar').on('tap',function(){
+	$('#txtnombre').val($('#jugador').text());	
+	});
+	$('#btnguardar').on('tap',function(){
+		var nuevonombre=$('#txtnombre').val();
+		basedatos.transaction(function(consulta){ 
+		consulta.excuteSql("UPDATE Usuario SET NombreUsuario=? WHERE CLaveUsuario='1';",[nuevonombre]);
+	});
+	cargarnombrejugador();
+	});
+	
 	audio=window.plugins.LowLatencyAudio;
 	audio.preloadFX('B1', 'audio/C.mp3', function(){}, function(msg){alert ("Error " + msg);});
 	audio.preloadFX('B2', 'audio/D.mp3', function(){}, function(msg){alert ("Error " + msg);});
