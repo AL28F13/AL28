@@ -13,7 +13,7 @@ document.addEventListener("deviceready",function(){
 	
 	
 	});
-	cargarnombrejugador();
+	
 	});
 	}
 	
@@ -25,7 +25,7 @@ document.addEventListener("deviceready",function(){
 		basedatos.transaction(function(consulta){ 
 		consulta.excuteSql("UPDATE Usuario SET NombreUsuario=? WHERE ClaveUsuario='1';",[nuevonombre]);
 	});
-	
+	cargarnombrejugador();
 	});
 	
 	audio=window.plugins.LowLatencyAudio;
