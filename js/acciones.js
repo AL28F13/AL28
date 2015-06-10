@@ -37,6 +37,12 @@ document.addEventListener("deviceready",function(){
 		}
 	});
 }
+
+	$('.cuadro').on('tap', function (){
+		flash ($(this));
+		audio.play($(this).attr('id'));
+	});
+	
 	
 	audio=window.plugins.LowLatencyAudio;
 	audio.preloadFX('B1', 'audio/C.mp3', function(){}, function(msg){alert ("Error " + msg);});
